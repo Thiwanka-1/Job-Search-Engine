@@ -1,50 +1,25 @@
-# =========================
-# Node / Express (Backend)
-# =========================
-
-# dependencies
-node_modules/
-
-# env files
-.env
-.env.*
-!.env.example
-
-# logs
-logs/
+# Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# runtime / cache
-pids/
-*.pid
-*.seed
-*.pid.lock
+node_modules
+dist
+dist-ssr
+*.local
 
-# build / output
-dist/
-build/
-out/
-
-# OS / editor junk
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
-Thumbs.db
-.vscode/
-.idea/
-*.swp
-
-# coverage
-coverage/
-.nyc_output/
-
-# temp
-tmp/
-temp/
-
-# =========================
-# Uploads (PDFs etc.)
-# =========================
-uploads/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
