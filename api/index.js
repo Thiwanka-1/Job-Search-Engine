@@ -2,11 +2,16 @@ import express from "express";
 import cors from "cors";
 import "dotenv/config";
 
+import jobRoutes from "./routes/jobRoutes.js";
+
 const app = express();
 
 // ===== Middleware =====
 app.use(cors());
 app.use(express.json());
+
+
+
 
 // ===== Health Check =====
 app.get("/api/health", (req, res) => {
@@ -16,6 +21,9 @@ app.get("/api/health", (req, res) => {
     time: new Date().toISOString(),
   });
 });
+
+// ===== Routes =====
+app.use("/api/jobs", jobRoutes);
 
 // ===== 404 =====
 app.use((req, res) => {
